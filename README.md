@@ -52,7 +52,7 @@ print(aa*bb)
 
 - Mathematics
 - Plottiting (Matplotlib)
-- Backend (Pandas, Connect 4: Game boards, Digital Photography: Image processing): NumPy powers the backend calculations or data handling in various tools
+- Backend (Pandas: Handles data frames for faster data manipulations, Connect 4: Game boards, Digital Photography: Image processing): NumPy powers the backend calculations or data handling in various tools
 
 
 
