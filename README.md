@@ -59,8 +59,8 @@ print(aa*bb)
 ## Installation 
 `pip3 install numpy`
 
-## Various Commands 
-Setting up
+## Various Basic Commands 
+
 ```
 a = np.array([1,2,3,4], 'int16') # Setting up for int 16 
 print(a.ndim)  # gives Dimensions 1 
