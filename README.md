@@ -57,9 +57,17 @@ print(aa*bb)
 
 
 ## Installation 
-
 `pip3 install numpy`
 
+## Various Commands 
+Setting up
+```
+a = np.array([1,2,3,4], 'int16') # Setting up for int 16 
+print(a.ndim)  # gives Dimensions 1 
+print(a.shape) # gives (4,)
+print(a.itemsize) # gives 2 - which meanst int 16 is 2 bytes # Basically gives me the number of bytes for one item 
+print(a.dtype) # int64
+```
 
 
 
