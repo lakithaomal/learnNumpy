@@ -46,3 +46,33 @@ bb= np.array(b)
 print(aa*bb)
 # Gives [ 2  2 15]
 ```
+
+## Applications of Numpy 
+
+
+- Mathematics
+- Plottiting (Matplotlib)
+- Backend (Pandas, Connect 4: Game boards, Digital Photography: Image processing): NumPy powers the backend calculations or data handling in various tools
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
