@@ -44,4 +44,5 @@ bb= np.array(b)
 # TypeError: can't multiply sequence by non-int of type 'list'
 
 print(aa*bb)
+# Gives [ 2  2 15]
 ```
