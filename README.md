@@ -56,6 +56,10 @@ print(aa*bb)
 - Machine Learning: Similar to tensors 
 
 
+## Installation 
+
+`pip3 install numpy`
+
 
 
 
