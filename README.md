@@ -23,3 +23,25 @@ In a list the int, 5 is represented as a long which is 8 bytes. However in numpy
 - Object Value     - Long (8 bytes)
 
 Becase numpy is less bytes and the computer reads it much faster. Also numpy douesnt require type checking - and also numpy utilizeds continous memory. Unlike lists  which saves items which are scattered around. 
+
+Benifits of continous memory
+- SIMD Vector processing (Single instuction Mulitple data) - Performs computation all contous memory locations 
+- Effective Cache Utilization  Cache is fast memory.
+
+Both lists and numpy you can do Insertion, Deletion, Appending and Concatination. But numpy arrays can do a lot more. 
+
+## Lists Vs Numpy - Execution
+```
+import numpy as np 
+
+a= [1,2,3]
+b= [2,1,5]
+
+aa= np.array(a)
+bb= np.array(b)
+
+# print(a*b) 
+# TypeError: can't multiply sequence by non-int of type 'list'
+
+print(aa*bb)
+```
