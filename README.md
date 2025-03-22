@@ -236,5 +236,6 @@ print(sum(range(5),-1)) Sum of Last axis 0 + 1 + 2 + 3 + 4 = 10
 - imaginary values `1j*Z`  ij is imaginary
 - `Z/1/1` is equal to (Z / 1) / 1
 - `Z<Z>Z` is equal to (Z < Z) and (Z > Z)
-
+- `//`: Floor division (division that returns the integer part of the quotient)
+- `%`: Modulo (returns the remainder of a division)
 
