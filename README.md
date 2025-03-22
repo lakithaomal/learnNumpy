@@ -213,8 +213,13 @@ print(np.repeat(a, 2))  # [1 1 2 2 3 3]
 
 - Normalizing a matrix `(Z - np.mean (Z)) / (np.std (Z))`
 - Casting numpy arrays `x.astype(np.uint8)`
-
-
+- Creating a new data type
+  ``` 
+    color = np.dtype([("r", np.ubyte),
+                      ("g", np.ubyte),
+                      ("b", np.ubyte),
+                      ("a", np.ubyte)])
+  ```
 
 
 
