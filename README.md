@@ -248,5 +248,7 @@ print(sum(range(5),-1)) Sum of Last axis 0 + 1 + 2 + 3 + 4 = 10
   today     = np.datetime64('today')
   tomorrow  = np.datetime64('today') + np.timedelta64(1)
   ```
-
+  - All Dates in July `Z = np.arange('2016-07', '2016-08', dtype='datetime64[D]')`
+  - Linearly Spaced Vector `= np.linspace(0,1,12) ` with 12 elements  both ends inclusinve
+  - Sorting `X.sort()` Does sort but does not output anything - you can also use `np.sort(X)`
 
