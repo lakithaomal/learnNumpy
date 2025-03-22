@@ -134,6 +134,7 @@ print(f"Sci: {12345.678:e}")                 # scientific notation
     Z[1::2,::2] = 1
     Z[::2,1::2] = 1
     ```
+- Get Specific index   `np.unravel_index(99,(6,7,8))`
 
 
 
