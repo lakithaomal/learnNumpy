@@ -238,4 +238,8 @@ print(sum(range(5),-1)) Sum of Last axis 0 + 1 + 2 + 3 + 4 = 10
 - `Z<Z>Z` is equal to (Z < Z) and (Z > Z)
 - `//`: Floor division (division that returns the integer part of the quotient)
 - `%`: Modulo (returns the remainder of a division)
+- More on Where  `print(np.where(Z>0, np.ceil(Z), np.floor(Z)))` np.where(condition, value_if_true, value_if_false)
+- Get Common Values : `np.intersect1d(Z1,Z2)`
+- Get All Values : `np.union1d(Z1,Z2)`
+
 
