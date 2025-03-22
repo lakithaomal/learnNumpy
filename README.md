@@ -211,6 +211,9 @@ print(np.tile(a, 2))    # [1 2 3 1 2 3]
 print(np.repeat(a, 2))  # [1 1 2 2 3 3]
 ```
 
+- Normalizing a matrix `(Z - np.mean (Z)) / (np.std (Z))`
+- Casting numpy arrays `x.astype(np.uint8)`
+
 
 
 
