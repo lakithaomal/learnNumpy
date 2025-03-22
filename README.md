@@ -107,9 +107,25 @@ print(f"Sci: {12345.678:e}")                 # scientific notation
 - Identity eye or identity `np.identity(5)`
 - Random Matrix `np.random.random((3,3,3))`
 - Max and Min `print(x.max())` and `print(x.min())`
+- Array Borders `np.pad(Z, pad_width=1, mode='constant', constant_values=0)`
+  ```
+  Z = np.ones((5,5))
+  Z = np.pad(Z, pad_width=1, mode='constant', constant_values=0)
+  print(Z)
 
-
-
+  # Using fancy indexing
+  Z[:, [0, -1]] = 0
+  Z[[0, -1], :] = 0
+  print(Z)
+  ```
+  - Comparison with nans always gives nans
+    - 0 * np.nan
+    - np.nan == np.nan        = nan
+    - np.inf > np.nan         = False
+    - np.nan - np.nan         = False 
+    - np.nan in set([np.nan]) = True 
+    - 0.3 == 3 * 0.1          = False This is because floating point decimal representation issue
+- Just below the diagonal `np.diag(1+np.arange(4),k=-1)`
 
 
 
