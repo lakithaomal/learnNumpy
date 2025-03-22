@@ -220,6 +220,7 @@ print(np.repeat(a, 2))  # [1 1 2 2 3 3]
                       ("b", np.ubyte),
                       ("a", np.ubyte)])
   ```
+- Matrix Multiplication `np.matmul(x,y)`
 
 
 
