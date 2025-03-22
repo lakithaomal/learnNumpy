@@ -70,6 +70,32 @@ print(a.dtype) # int64
 ```
 
 
+## 1. Old-Style Formatting (% formatting)
+
+| Placeholder | Type of Value      | Example                               | Output                  |
+|-------------|--------------------|---------------------------------------|-------------------------|
+| `%d`        | Integer            | `"I have %d apples" % 5`              | `"I have 5 apples"`     |
+| `%f`        | Float (decimal)    | `"Price: %f" % 3.14`                  | `"Price: 3.140000"`     |
+| `%.2f`      | Float (2 decimals) | `"Price: %.2f" % 3.1415`              | `"Price: 3.14"`         |
+| `%s`        | String             | `"Hello, %s" % "Alice"`               | `"Hello, Alice"`        |
+| `%x`        | Hexadecimal (int)  | `"Hex: %x" % 255`                     | `"Hex: ff"`             |
+| `%o`        | Octal (int)        | `"Octal: %o" % 8`                     | `"Octal: 10"`           |
+| `%e`        | Scientific float   | `"Sci: %e" % 12345.678`               | `"Sci: 1.234568e+04"`   |
+
+---
+
+## 2. Modern Formatting (f-Strings, Python 3.6+)
+
+```python
+apples = 5
+price = 3.1415
+name = "Alice"
+
+print(f"I have {apples} apples")             # integer
+print(f"Price: {price:.2f}")                 # float with 2 decimal places
+print(f"Hello, {name}")                      # string
+print(f"Hex: {255:x}")                       # hex
+print(f"Sci: {12345.678:e}")                 # scientific notation
 
 
 
