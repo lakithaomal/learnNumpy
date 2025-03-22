@@ -221,7 +221,20 @@ print(np.repeat(a, 2))  # [1 1 2 2 3 3]
                       ("a", np.ubyte)])
   ```
 - Matrix Multiplication `np.matmul(x,y)`
+-  range(5) goes from 0 and does not include 5
+-  range(4,8) starts from 4 ends in 7
+-  Sum of generic python and sum of np is different
+```
+print(sum(range(5),-1)) # Start from -1 sum = -1 + 0 + 1 + 2 + 3 + 4 = 9
+from numpy import *
+print(sum(range(5),-1)) Sum of Last axis 0 + 1 + 2 + 3 + 4 = 10
+```
 
-
+- Power of `Z**Z`
+- Bit Shift `2 << Z >> 2`  2 << Z shift by two and the >> 2 shift left by two 
+- Illigal Move `Z <- Z`
+- imaginary values `1j*Z`  ij is imaginary
+- `Z/1/1` is equal to (Z / 1) / 1
+- `Z<Z>Z` is equal to (Z < Z) and (Z > Z)
 
 
