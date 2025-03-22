@@ -127,6 +127,13 @@ print(f"Sci: {12345.678:e}")                 # scientific notation
     - 0.3 == 3 * 0.1          = False This is because floating point decimal representation issue
 - Just below the diagonal `np.diag(1+np.arange(4),k=-1)`
 
+-  zeros Matrix `np.zeros(64) ` creates an array with 64 elements. Not 64 * 64
+- Checkerboard
+    ```
+    Z = np.zeros((8,8),dtype=int)
+    Z[1::2,::2] = 1
+    Z[::2,1::2] = 1
+    ```
 
 
 
