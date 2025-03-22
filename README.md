@@ -97,11 +97,10 @@ print(f"Hello, {name}")                      # string
 print(f"Hex: {255:x}")                       # hex
 print(f"Sci: {12345.678:e}")                 # scientific notation
 
+```
 
-
-
-
-
+### Hints 
+asking for help `print(np.info('add'))`
 
 
 
