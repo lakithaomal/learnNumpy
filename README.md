@@ -16,7 +16,7 @@ It is a multidimensianal array library.
 
 Why not lists. Numpy arrays are much faster than lists. The reson being numpy uses fixed types. 
 
-In a list the int, 5 is represented as a long which is 8 bytes. However in numpy we can go down to int8 which is one byte (default is int64 (4 bytes)). Further a list a lot more information is required.
+In a list the int, 5 is represented as a long which is 8 bytes. However in numpy we can go down to int8 which is one byte (default is int64 (8 bytes)). Further a list a lot more information is required.
 - Size             - Long (4 bytes)
 - Reference Count  - Long (8 bytes)
 - Object Type      - Long (8 bytes)
