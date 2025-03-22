@@ -255,4 +255,8 @@ print(sum(range(5),-1)) Sum of Last axis 0 + 1 + 2 + 3 + 4 = 10
   - Appriximately Equal   `np.allclose(A, B)`
   - Surely Eqaul   `np.array_equal(A,B)`
   - Index of Max and Min `Z.argmax()` and `Z.argmin()`
+  - Creating a mesh grid
+    `Z['x'], Z['y'] = np.meshgrid(np.linspace(0,1,5),np.linspace(0,1,5))`
+
+
 
