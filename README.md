@@ -251,4 +251,8 @@ print(sum(range(5),-1)) Sum of Last axis 0 + 1 + 2 + 3 + 4 = 10
   - All Dates in July `Z = np.arange('2016-07', '2016-08', dtype='datetime64[D]')`
   - Linearly Spaced Vector `= np.linspace(0,1,12) ` with 12 elements  both ends inclusinve
   - Sorting `X.sort()` Does sort but does not output anything - you can also use `np.sort(X)`
+  - Another way to sum  `np.add.reduce(Z)`
+  - Appriximately Equal   `np.allclose(A, B)`
+  - Surely Eqaul   `np.array_equal(A,B)`
+  - Index of Max and Min `Z.argmax()` and `Z.argmin()`
 
