@@ -134,8 +134,82 @@ print(f"Sci: {12345.678:e}")                 # scientific notation
     Z[1::2,::2] = 1
     Z[::2,1::2] = 1
     ```
-- Get Specific index   `np.unravel_index(99,(6,7,8))`
+- Get Specific index   `np.unravel_index(99,(6,7,8))` here 100th index is found on a 6*7*8 matrix 
 
+# NumPy `tile()` Function
+
+The `np.tile()` function in NumPy is used to **repeat an array** along specified axes, like tiling a pattern across a larger space.
+
+---
+
+## Syntax
+```python
+numpy.tile(array, reps)
+```
+- **`array`**: The input array to repeat.
+- **`reps`**: An integer or tuple indicating how many times to repeat along each axis.
+
+---
+
+## Example 1: Repeat a 1D Array
+```python
+import numpy as np
+
+a = np.array([1, 2, 3])
+result = np.tile(a, 2)
+
+print(result)  # Output: [1 2 3 1 2 3]
+```
+**Explanation**: The array `[1 2 3]` is repeated **2 times**.
+
+---
+
+## Example 2: Repeat a 2D Array Along Both Axes
+```python
+a = np.array([[1, 2], [3, 4]])
+result = np.tile(a, (2, 3))
+
+print(result)
+```
+
+**Output**:
+```
+[[1 2 1 2 1 2]
+ [3 4 3 4 3 4]
+ [1 2 1 2 1 2]
+ [3 4 3 4 3 4]]
+```
+
+**Explanation**:
+- The array is repeated **2 times vertically** (rows),
+- And **3 times horizontally** (columns).
+
+---
+
+## Visual Concept
+Think of a small tile (array) and covering a big floor (larger array) by **repeating it** in rows and columns.
+
+---
+
+## Use Cases
+- Creating larger patterns from small arrays.
+- Preparing data for broadcasting.
+- Synthetic dataset creation or data augmentation.
+
+---
+
+## Bonus: Difference Between `tile()` and `repeat()`
+| Function       | Purpose                                  |
+|----------------|------------------------------------------|
+| `np.tile()`    | Repeats the **whole array**              |
+| `np.repeat()`  | Repeats **each element** individually    |
+
+Example:
+```python
+a = np.array([1, 2, 3])
+print(np.tile(a, 2))    # [1 2 3 1 2 3]
+print(np.repeat(a, 2))  # [1 1 2 2 3 3]
+```
 
 
 
