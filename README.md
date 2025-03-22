@@ -241,5 +241,12 @@ print(sum(range(5),-1)) Sum of Last axis 0 + 1 + 2 + 3 + 4 = 10
 - More on Where  `print(np.where(Z>0, np.ceil(Z), np.floor(Z)))` np.where(condition, value_if_true, value_if_false)
 - Get Common Values : `np.intersect1d(Z1,Z2)`
 - Get All Values : `np.union1d(Z1,Z2)`
+- `np.sqrt(-1) == np.emath.sqrt(-1)` is false where emath is used for complex number maths - np.sqrt(-1) is nan and np.emath.sqrt(-1) is 1j
+- Numpy Date times
+  ```
+  yesterday = np.datetime64('today') - np.timedelta64(1)
+  today     = np.datetime64('today')
+  tomorrow  = np.datetime64('today') + np.timedelta64(1)
+  ```
 
 
