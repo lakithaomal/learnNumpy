@@ -1,7 +1,7 @@
 import numpy as np 
 
 # MCLNS 
-a = np.genfromtxt('data.txt',delimiter=',')
+a = np.genfromtxt('../data/data.txt',delimiter=',')
 print(a)
 
 a= a.astype('int32')
