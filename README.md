@@ -101,7 +101,7 @@ print(f"Sci: {12345.678:e}")                 # scientific notation
 
 ### Hints 
 asking for help `print(np.info('add'))`
-
+going from x to y `Z = np.arange(10,50)`
 
 
 
