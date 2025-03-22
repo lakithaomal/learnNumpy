@@ -100,9 +100,13 @@ print(f"Sci: {12345.678:e}")                 # scientific notation
 ```
 
 ### Hints 
-asking for help `print(np.info('add'))`
-going from x to y `Z = np.arange(10,50)`
-
+- asking for help `print(np.info('add'))`
+- going from x to y `Z = np.arange(10,50)`
+- reversing the grid `q08 = q07[::-1]` 
+- non zero indices q10 `np.where(q10!=0)` or `q10.nonzero()`
+- Identity eye or identity `np.identity(5)`
+- Random Matrix `np.random.random((3,3,3))`
+- Max and Min `print(x.max())` and `print(x.min())`
 
 
 
