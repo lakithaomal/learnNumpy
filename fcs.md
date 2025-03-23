@@ -312,4 +312,66 @@ for (i, j), val in np.ndenumerate(arr):
 
 ---
 
+# 📝 Summary: `np.unravel_index(np.argmin(D), A.shape)`
+
+---
+
+## 🔹 Purpose:
+Find the **multi-dimensional index** of the **minimum value** in array `D` (with shape of `A`).
+
+---
+
+## 🔸 Breakdown:
+- `np.argmin(D)` → Flat index of min value in `D`
+- `np.unravel_index(..., A.shape)` → Converts flat index to `(row, col)` in shape of `A`
+
+---
+
+## 🔸 Example:
+```python
+import numpy as np
+A = np.array([[10, 3, 5],
+              [7, 2, 8]])
+D = A.copy()
+
+idx = np.unravel_index(np.argmin(D), A.shape)
+print("Min Value:", A[idx])     # 2
+print("Index:", idx)            # (1, 1)
+```
+
+---
+
+## 🔹 Result:
+`A[1, 1] = 2` → Smallest value with index `(1, 1)`
+# 📝 Summary: `np.put(Z, np.random.choice(range(n*n), p, replace=False), 1)`
+
+---
+
+## 🔹 Purpose:
+Randomly set **`p` unique elements** in array `Z` to `1`.
+
+---
+
+## 🔸 Breakdown:
+- `range(n*n)` → Flat indices of `Z` (if Z is `n x n`)
+- `np.random.choice(..., p, replace=False)` → Pick `p` unique random indices
+- `np.put(Z, indices, 1)` → Set `Z[indices] = 1`
+
+---
+
+## 🔸 Example:
+```python
+import numpy as np
+n, p = 3, 4
+Z = np.zeros((n, n), dtype=int)
+np.put(Z, np.random.choice(range(n*n), p, replace=False), 1)
+print(Z)
+```
+
+---
+
+## 🔹 Result:
+4 random positions in `Z` are set to `1` (no repeats).
+
+
 **Note**: Use `#` comments to understand code snippets. Many operations are **broadcastable** and **vectorized** for performance.
