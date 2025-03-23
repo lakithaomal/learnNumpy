@@ -264,6 +264,52 @@ f"Hex: {255:x}"                             # Hexadecimal
 np.info('add')                              # Info on function
 ```
 
+# 📝 Python For Loops – Quick Cheatsheet
+
+---
+
+## 🔹 Loop Through Items
+```python
+for item in iterable:
+    print(item)
+```
+
+---
+
+## 🔸 Loop Through Indexes
+```python
+for i in range(len(iterable)):
+    print(i, iterable[i])
+```
+
+---
+
+## 🔸 Loop Index + Item
+```python
+for i, item in enumerate(iterable):
+    print(i, item)
+```
+
+---
+
+## 🔸 2D NumPy Array with Index
+```python
+import numpy as np
+for (i, j), val in np.ndenumerate(arr):
+    print((i, j), val)
+```
+
+---
+
+## 🔶 Summary
+
+| Task             | Best Method               |
+|------------------|---------------------------|
+| Items only       | `for item in iterable`    |
+| Indexes only     | `for i in range(len(...))`|
+| Index + item     | `enumerate()`             |
+| 2D array index   | `np.ndenumerate()`        |
+
 ---
 
 **Note**: Use `#` comments to understand code snippets. Many operations are **broadcastable** and **vectorized** for performance.
