@@ -37,11 +37,12 @@ np.pad(np.ones((2,2)), 1, constant_values=0)# Padding with zeros
 
 ## Array Properties
 ```python
-a.shape                                     # (rows, cols)
-a.ndim                                      # Number of dimensions
-a.size                                      # Total elements
-a.dtype                                     # Data type
-a.itemsize                                  # Bytes per element
+a = np.array([1,2,3,4], 'int16')
+a.shape            #  gives (4,)                                 # (rows, cols)
+a.ndim            # gives Dimensions 1                                # Number of dimensions
+a.size                # gives 4                       # Total elements
+a.dtype             # int64                        # Data type
+a.itemsize         # gives 2                         # Bytes per element
 ```
 
 ---
@@ -61,7 +62,7 @@ a[:, 1]                                     # All rows, col 1
 a[1, :]                                     # Row 1, all cols
 a[1:3, 0:2]                                 # Subarray
 a[::-1]                                     # Reverse array
-np.where(a != 0)                            # Non-zero indices
+np.where(a != 0)   or q10.nonzero()         # Non-zero indices
 ```
 
 ---
@@ -243,20 +244,27 @@ np.sum(range(5), -1)                        # NumPy: 10
 
 ## String Formatting
 
+
+
+### f-Strings (Modern)
+```python
+
+apples = 5
+price = 3.1415
+name = "Alice"
+
+print(f"I have {apples} apples")             # integer
+print(f"Price: {price:.2f}")                 # float with 2 decimal places
+print(f"Hello, {name}")                      # string
+print(f"Hex: {255:x}")                       # hex
+print(f"Sci: {12345.678:e}")                 # scientific notation                         # Hexadecimal
+```
 ### Old Style
 ```python
 "I have %d apples" % 5                      # Integer
 "Price: %.2f" % 3.1415                      # Float 2 decimals
 "Hex: %x" % 255                             # Hexadecimal
 ```
-
-### f-Strings (Modern)
-```python
-f"I have {5} apples"                        # Integer
-f"Price: {3.1415:.2f}"                      # Float 2 decimals
-f"Hex: {255:x}"                             # Hexadecimal
-```
-
 ---
 
 ## Help & Info
