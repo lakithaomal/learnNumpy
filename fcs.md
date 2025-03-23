@@ -374,4 +374,39 @@ print(Z)
 4 random positions in `Z` are set to `1` (no repeats).
 
 
+# 📝 Summary: `np.isnan(Z).all(axis=0)`
+
+---
+
+## 🔹 Purpose:
+Check which **columns** in array `Z` are **entirely NaN**.
+
+---
+
+## 🔸 Breakdown:
+- `np.isnan(Z)` → Boolean array: `True` where `Z` is NaN
+- `.all(axis=0)` → For each column, `True` if **all values are NaN**
+
+---
+
+## 🔸 Example:
+```python
+import numpy as np
+Z = np.array([[np.nan, 1.0],
+              [np.nan, np.nan],
+              [np.nan, 3.0]])
+
+result = np.isnan(Z).all(axis=0)
+print(result)  # [ True False ]
+```
+
+---
+
+## 🔹 Result:
+- Column 0 → All NaN → `True`
+- Column 1 → Not all NaN → `False`
+
+
 **Note**: Use `#` comments to understand code snippets. Many operations are **broadcastable** and **vectorized** for performance.
+
+
