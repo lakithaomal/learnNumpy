@@ -407,6 +407,48 @@ print(result)  # [ True False ]
 - Column 1 → Not all NaN → `False`
 
 
+---
+
+# 🔁 Python Loops – NumPy Style
+
+| Task             | Best Practice               |
+|------------------|-----------------------------|
+| Items only       | `for item in iterable`      |
+| Indexes only     | `for i in range(len(...))`  |
+| Index + item     | `enumerate(iterable)`       |
+| 2D index + val   | `np.ndenumerate(array)`     |
+
+---
+
+## 🔸 2D Loop Example
+```python
+for (i, j), val in np.ndenumerate(arr):
+    print((i, j), val)
+```
+
+---
+
+# 🎯 One-Liner Examples
+
+| Function                | One-Liner Example                                                                                   | Description                                                |
+|------------------------|-----------------------------------------------------------------------------------------------------|------------------------------------------------------------|
+| `np.argmin()`          | `idx = np.argmin(a)`                                                                                | Get index of the min value in flattened array `a`          |
+| `np.unravel_index()`   | `multi_idx = np.unravel_index(idx, a.shape)`                                                        | Convert flat idx to (row, col)                             |
+| `np.put()`             | `np.put(a, [1, 3], 9)`                                                                              | Set positions 1 and 3 in flattened `a` to 9                |
+| Set min to 0           | `np.put(a, [np.argmin(a)], 0)`                                                                      | Replace min value in `a` with 0                            |
+| Random set to 1        | `np.put(a, np.random.choice(a.size, 4, replace=False), 1)`                                          | Set 4 random positions in `a` to 1                         |
+
+---
+
+# 🎯 np.isnan(Z).all(axis=0)
+
+## Purpose: Check which columns in array `Z` are entirely NaN.
+```python
+result = np.isnan(Z).all(axis=0)
+print(result)  # Example: [ True False ]
+
+
+
 **Note**: Use `#` comments to understand code snippets. Many operations are **broadcastable** and **vectorized** for performance.
 
 
