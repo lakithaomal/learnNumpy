@@ -16,7 +16,7 @@ It is a multidimensianal array library.
 
 Why not lists. Numpy arrays are much faster than lists. The reson being numpy uses fixed types. 
 
-In a list the int, 5 is represented as a long which is 8 bytes. However in numpy we can go down to int8 which is one byte (default is int64 (4 bytes)). Further a list a lot more information is required.
+In a list the int, 5 is represented as a long which is 8 bytes. However in numpy we can go down to int8 which is one byte (default is int64 (8 bytes)). Further a list a lot more information is required.
 - Size             - Long (4 bytes)
 - Reference Count  - Long (8 bytes)
 - Object Type      - Long (8 bytes)
@@ -249,14 +249,43 @@ print(sum(range(5),-1)) Sum of Last axis 0 + 1 + 2 + 3 + 4 = 10
   tomorrow  = np.datetime64('today') + np.timedelta64(1)
   ```
   - All Dates in July `Z = np.arange('2016-07', '2016-08', dtype='datetime64[D]')`
-  - Linearly Spaced Vector `= np.linspace(0,1,12) ` with 12 elements  both ends inclusinve
-  - Sorting `X.sort()` Does sort but does not output anything - you can also use `np.sort(X)`
-  - Another way to sum  `np.add.reduce(Z)`
-  - Appriximately Equal   `np.allclose(A, B)`
-  - Surely Eqaul   `np.array_equal(A,B)`
-  - Index of Max and Min `Z.argmax()` and `Z.argmin()`
-  - Creating a mesh grid
+- Linearly Spaced Vector `= np.linspace(0,1,12) ` with 12 elements  both ends inclusinve
+- Sorting `X.sort()` Does sort but does not output anything - you can also use `np.sort(X)`
+- Another way to sum  `np.add.reduce(Z)`
+- Appriximately Equal   `np.allclose(A, B)`
+- Surely Eqaul   `np.array_equal(A,B)`
+- Index of Max and Min `Z.argmax()` and `Z.argmin()`
+- Creating a mesh grid
     `Z['x'], Z['y'] = np.meshgrid(np.linspace(0,1,5),np.linspace(0,1,5))`
+- Matrix Operations
+  `np.linalg.det(d)`, `np.linalg.eig(d)` and `np.linalg.inv(d)`
+- Min Max on Different Axis
+   `np.max(a, axis= 1)` row wise
+- Stacking
+```
+v1 = np.array([1,2,3,4])
+print(v1)
+v2 = np.array([4,5,6,7])
+print(v2)
+v3 = np.vstack([v1,v2])
+print(v3)
+# [[1 2 3 4]
+#  [4 5 6 7]]
 
+v4 = np.hstack([v1,v2])
+print(v4) # [1 2 3 4 4 5 6 7]
+```
+- Any And All functions 
+```
 
+print(np.any(a>5,axis=0)) # Again checks columnwise 
+# [False  True  True  True False  True False False  True  True  True  True True  True  True False  True  True]
+print(np.any(a>5,axis=1)) # Again checks rowwise
+# [ True  True  True]
 
+print(np.all(a>5,axis=0)) # Again checks columnwise 
+# [False  True  True  True False False False False False False False False  False False False False False False]
+print(np.all(a>5,axis=1)) # Again checks rowwise
+# [False False False]
+print(((a>50) & (a<20)))  
+```
