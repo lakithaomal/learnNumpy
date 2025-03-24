@@ -42,6 +42,7 @@ a.itemsize         # 2 - Bytes per element
 ## Reshape & Transpose
 ```python
 a.reshape(2, 2)     # Reshape 1D array to 2x2
+b = a.reshape(-1)   # You're flattening the array into 1D, because you're asking for a single dimension with all elements.
 a.T                 # Transpose of array (works for 2D+)
 ```
 
