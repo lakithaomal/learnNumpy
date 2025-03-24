@@ -170,7 +170,7 @@ color = np.dtype([('r',np.ubyte),('g',np.ubyte),('b',np.ubyte),('a',np.ubyte)])
 
 ## Dates with NumPy
 ```python
-np.datetime64('today')                      # Today's date
+np.datetime64('today')                                  # Today's date
 np.arange('2020-01', '2020-02', dtype='datetime64[D]')  # All Jan dates
 ```
 
