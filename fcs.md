@@ -135,6 +135,16 @@ np.tile([[1,2],[3,4]], (2,3))
 #  [3 4 3 4 3 4]]
 ```
 
+## Array Border 
+```python
+Z = np.ones((5,5))
+Z = np.pad(Z, pad_width=1, mode='constant', constant_values=0)
+
+# Using fancy indexing
+Z[:, [0, -1]] = 0
+Z[[0, -1], :] = 0
+```
+
 ---
 
 ## Normalization
@@ -309,6 +319,17 @@ for (i, j), val in np.ndenumerate(arr):
 result = np.isnan(Z).all(axis=0)
 print(result)  # Example: [ True False ]
 ```
+## Special Nan Examples and more 
+```python
+# Comparison with nans always gives nans
+0 * np.nan                 # nan
+np.nan == np.nan           # False    
+np.inf > np.nan            # False
+np.nan - np.nan            # False
+np.nan in set([np.nan])    # True
+0.3 == 3 * 0.1             # False This is because floating point decimal representation issue
+```
+
 
 
 
