@@ -84,14 +84,15 @@ np.argmin(a)        # Index of min value
 
 ## Logical & Comparison
 ```python
-a > 5               # Element-wise comparison
-np.any(a > 5)       # Any element > 5?
-np.all(a > 5)       # All elements > 5?
+a > 5                         # Element-wise comparison
+np.any(a > 5)                 # Any element > 5?
+np.all(a > 5)                 # All elements > 5?
 np.where(a > 0, 1, 0)         # Conditional selection
 np.intersect1d(a, b)          # Common elements (1D output)
 np.union1d(a, b)              # All unique elements (1D output)
 np.allclose(a, b)             # Approximate equality (with tolerance)
 np.array_equal(a, b)          # Exact equality
+np.array([-1, 0, 1]).astype(bool) # [ True False  True] anything but a 0 is true even nans  
 ```
 
 ## Bitwise & Special Operations
@@ -102,6 +103,7 @@ a // 2              # Floor division
 a % 2               # Modulo
 np.sqrt(4)          # Square root
 np.emath.sqrt(-1)   # Complex sqrt (returns 1j); np.sqrt(-1) returns nan
+
 ```
 
 ## Tiling & Repeating
