@@ -215,6 +215,23 @@ for i, item in enumerate(iterable):
 for (i, j), val in np.ndenumerate(array):
     print((i, j), val)
 
+# Something simple 
+arr = np.array([[1, 2, 3], [4, 5, 6]])
+for x in arr:
+    print(x)
+# [1 2 3]
+# [4 5 6]
+
+# N-dimensional Iterator - Gives you all the elements no matter the shape
+for x in np.nditer(arr):
+    print(x)
+# 1
+# 2
+# 3
+# 4
+# 5
+# 6
+
 ```
 
 ## Casting 
