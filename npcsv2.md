@@ -201,8 +201,21 @@ np.hstack([a,b])        # Horizontal stack
 | Index + item   | for i, item in enumerate(iterable) |
 | 2D index+val   | for (i, j), val in np.ndenumerate(array) |
 
-## 2D Loop Example
+## Loop Examples
 ```python
-for (i, j), val in np.ndenumerate(arr):
+for item in iterable:
+    print(item)
+
+# Indexes only
+for i in range(len(iterable)):
+    print(i, iterable[i])
+
+# Index + item
+for i, item in enumerate(iterable):
+    print(i, item)
+
+# 2D index + value (for arrays)
+for (i, j), val in np.ndenumerate(array):
     print((i, j), val)
+
 ```
