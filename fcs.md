@@ -305,7 +305,7 @@ for (i, j), val in np.ndenumerate(arr):
 | Function                | One-Liner Example                                                                                   | Description                                                |
 |------------------------|-----------------------------------------------------------------------------------------------------|------------------------------------------------------------|
 | `np.argmin()`          | `idx = np.argmin(a)`                                                                                | Get index of the min value in flattened array `a`          |
-| `np.unravel_index()`   | `multi_idx = np.unravel_index(idx, a.shape)`                                                        | Convert flat idx to (row, col)                             |
+| `np.unravel_index()`   | `multi_idx = np.unravel_index(idx, a.shape)`  `np.unravel_index(99,(6,7,8))` here 100th index is found on a 678 matrix                                                       | Convert flat idx to (row, col)                             |
 | `np.put()`             | `np.put(a, [1, 3], 9)`                                                                              | Set positions 1 and 3 in flattened `a` to 9                |
 | Set min to 0           | `np.put(a, [np.argmin(a)], 0)`                                                                      | Replace min value in `a` with 0                            |
 | Random set to 1        | `np.put(a, np.random.choice(a.size, 4, replace=False), 1)`                                          | Set 4 random positions in `a` to 1                         |
