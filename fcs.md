@@ -23,13 +23,14 @@ import numpy as np
 ```python
 np.array([1, 2, 3])                         # 1D array
 np.array([[1, 2], [3, 4]])                  # 2D array
+np.zeros(64)                                # 1D matrix with 64 zeros  
 np.zeros((2, 3))                            # 2x3 zero matrix
 np.ones((2, 3))                             # 2x3 ones matrix
 np.empty((2, 3))                            # 2x3 uninitialized
-np.arange(0, 10, 2)                         # 0 to 8 step 2
-np.linspace(0, 1, 5)                        # 5 values 0 to 1
-np.identity(3)                              # 3x3 identity matrix
-np.random.random((3, 3))                    # 3x3 random matrix
+np.arange(0, 10, 2)                         # 0 to 8 step 2 - 10 is not inclusive 
+np.linspace(0, 1, 5)                        # 5 values 0 to 1 - 0 and 1 are inclusive  
+np.identity(3)                              # 3x3 identity matrix 
+np.random.random((3, 3))                    # 3x3 random matrix - Values are [0,1)
 np.pad(np.ones((2,2)), 1, constant_values=0)# Padding with zeros
 ```
 
@@ -73,6 +74,8 @@ a + b                                       # Element-wise addition
 a - b                                       # Subtraction
 a * b                                       # Multiplication
 a / b                                       # Division
+a//b                                        # Floor Division
+a%b                                         # Gives modulas 
 a ** 2                                      # Power
 np.dot(a, b)                                # Dot product
 np.matmul(a, b)                             # Matrix multiplication
@@ -101,10 +104,10 @@ a > 5                                       # Element-wise comparison
 np.any(a > 5)                               # Any > 5?
 np.all(a > 5)                               # All > 5?
 np.where(a > 0, 1, 0)                       # Conditional select
-np.intersect1d(a, b)                        # Common elements
-np.union1d(a, b)                            # All unique elements
-np.allclose(a, b)                           # Approximately equal
-np.array_equal(a, b)                        # Exactly equal
+np.intersect1d(a, b)                        # Common elements - always gives 1d output
+np.union1d(a, b)                            # All unique elements - always gives 1d output
+np.allclose(a, b)                           # Approximately equal - True or False outputs can add tolerance
+np.array_equal(a, b)                        # Exactly equal - True or False outputs 
 ```
 
 ---
@@ -133,6 +136,8 @@ np.tile([[1,2],[3,4]], (2,3))
 #  [3 4 3 4 3 4]
 #  [1 2 1 2 1 2]
 #  [3 4 3 4 3 4]]
+# The array is repeated 2 times vertically (rows),
+# And 3 times horizontally (columns).
 ```
 
 ## Array Border 
@@ -240,6 +245,14 @@ a.sort()                                    # Sort in-place
 ```python
 np.vstack([a,b])                            # Vertical stack
 np.hstack([a,b])                            # Horizontal stack
+
+v1 = np.array([1,2,3,4])
+v2 = np.array([4,5,6,7])
+v3 = np.vstack([v1,v2])
+# [[1 2 3 4]
+#  [4 5 6 7]]
+v4 = np.hstack([v1,v2])
+print(v4) # [1 2 3 4 4 5 6 7]
 ```
 
 ---
@@ -252,8 +265,11 @@ np.sum(range(5), -1)                        # NumPy: 10
 
 ---
 
-## String Formatting
-
+## Range functions 
+```python 
+range(5)   # goes from 0 and does not include 5
+range(4,8) # starts from 4 ends in 7
+```
 
 
 ### f-Strings (Modern)
@@ -330,7 +346,11 @@ np.nan in set([np.nan])    # True
 0.3 == 3 * 0.1             # False This is because floating point decimal representation issue
 ```
 
-
+# Floor  and Ceiling 
+```python
+np.ceil(Z)  # 1.2 will give you 3
+np.floor(Z) # 1.2 will give you 1
+```
 
 
 
