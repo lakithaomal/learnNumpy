@@ -309,9 +309,83 @@ print(b.shape)  # (3,)  <-- shape of b remains same
 ---
 
 ## Summary Table:
-
 | Method        | New Object? | Shared Data? | Changes Affect Original? |
 |---------------|-------------|--------------|---------------------------|
 | `=`           | No          | Yes          | Yes                       |
 | `copy()`      | Yes         | No           | No                        |
 | `view()`      | Yes         | Yes          | Yes (data), No (shape)    |
+
+
+# Numpy Function Summaries
+
+## 1. `np.concatenate`
+Concatenates a sequence of arrays along an existing axis.
+
+### Syntax
+```python
+np.concatenate((a1, a2, ...), axis=0)
+```
+
+### Example
+```python
+import numpy as np
+a = np.array([1, 2])
+b = np.array([3, 4])
+result = np.concatenate((a, b))  # [1 2 3 4]
+```
+
+---
+
+## 2. `np.split`
+Splits an array into multiple sub-arrays.
+
+### Syntax
+```python
+np.split(array, indices_or_sections, axis=0)
+```
+
+### Example
+```python
+a = np.array([1, 2, 3, 4, 5, 6])
+result = np.split(a, 3)  # [array([1,2]), array([3,4]), array([5,6])]
+```
+
+---
+
+## 3. `np.searchsorted`
+Finds indices where elements should be inserted to maintain order.
+
+### Syntax
+```python
+np.searchsorted(sorted_array, values, side='left')
+```
+
+### Example
+```python
+a = np.array([1, 3, 5])
+indices = np.searchsorted(a, [2, 4])  # [1, 2]
+```
+
+---
+
+## 4. `np.random.randint`
+Generates random integers between low (inclusive) and high (exclusive).
+
+### Syntax
+```python
+np.random.randint(low, high=None, size=None)
+```
+
+### Example
+```python
+rand_nums = np.random.randint(1, 10, size=5)  # e.g., [3, 7, 2, 9, 5]
+```
+
+---
+
+## Notes
+- All functions operate efficiently on numpy arrays.
+- Random functions like `randint` can be seeded for reproducibility using `np.random.seed()`.
+
+
+
