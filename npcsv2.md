@@ -14,6 +14,7 @@ import numpy as np
 ```
 
 ## Array Creation
+In numpy an array is called an ndarray `type(arr)` => `<class 'numpy.ndarray'>`
 ```python
 np.array([1, 2, 3])                         # 1D array
 np.array([[1, 2], [3, 4]])                  # 2D array
