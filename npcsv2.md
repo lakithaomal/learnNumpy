@@ -92,7 +92,7 @@ np.intersect1d(a, b)          # Common elements (1D output)
 np.union1d(a, b)              # All unique elements (1D output)
 np.allclose(a, b)             # Approximate equality (with tolerance)
 np.array_equal(a, b)          # Exact equality
-np.array([-1, 0, 1]).astype(bool) # [ True False  True] anything but a 0 is true even nans  
+
 ```
 
 ## Bitwise & Special Operations
@@ -213,3 +213,85 @@ for (i, j), val in np.ndenumerate(array):
     print((i, j), val)
 
 ```
+
+## Casting 
+``` python
+np.array([-1, 0, 1]).astype(bool) # [ True False  True] anything but a 0 is true even nans  
+arr = np.array([1, 2, 3], dtype=str) # Initiating as string 
+```
+
+# NumPy: View vs Copy vs Assignment (`=`)
+
+## 1. Using `=` : Assignment (No Copy)
+When you assign an array using `=`, both variables point to the **same data** in memory.
+
+### Example:
+```python
+import numpy as np
+
+a = np.array([1, 2, 3])
+b = a  # No copy, just a new reference
+b[0] = 99
+
+print(a)  # [99  2  3]  <-- a is modified too!
+```
+
+### Key Point:
+- Changes in `b` affect `a`.
+- `a` and `b` are the **same object** (`id(a) == id(b)`).
+
+---
+
+## 2. Using `copy()` : Deep Copy
+Creates a **new array with its own data**, independent of the original.
+
+### Example:
+```python
+a = np.array([1, 2, 3])
+b = a.copy()  # Deep copy
+b[0] = 99
+
+print(a)  # [1 2 3]  <-- a is unchanged
+print(b)  # [99 2 3]
+```
+
+### Key Point:
+- `a` and `b` are **different objects**.
+- Changes in `b` do **not affect** `a`.
+
+---
+
+## 3. Using `view()` : Shallow Copy (View)
+Creates a **new array object** that shares the **same data** with the original. Changing the **data** affects both, but changing **shape** does not.
+
+### Example:
+```python
+a = np.array([1, 2, 3])
+b = a.view()
+b[0] = 99
+
+print(a)  # [99 2 3]  <-- data is shared
+print(b)  # [99 2 3]
+```
+
+### Shape Change:
+```python
+a.shape = (3, 1)
+print(a.shape)  # (3, 1)
+print(b.shape)  # (3,)  <-- shape of b remains same
+```
+
+### Key Point:
+- Different objects, **shared data**.
+- Data change in one affects the other.
+- Shape change in one does **not** affect the other.
+
+---
+
+## Summary Table:
+
+| Method        | New Object? | Shared Data? | Changes Affect Original? |
+|---------------|-------------|--------------|---------------------------|
+| `=`           | No          | Yes          | Yes                       |
+| `copy()`      | Yes         | No           | No                        |
+| `view()`      | Yes         | Yes          | Yes (data), No (shape)    |
