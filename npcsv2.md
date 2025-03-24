@@ -1,7 +1,7 @@
 
 # NumPy Cheat Sheet
 
-NumPy is a fast, powerful library for numerical computing with fixed-type multidimensional arrays. It enables high-performance operations and forms the core of tools like Pandas and Matplotlib.
+NumPy (Numerical Python) is a fast, powerful library for numerical computing with fixed-type multidimensional arrays. It enables high-performance operations and forms the core of tools like Pandas and Matplotlib.
 
 ## Installation
 ```python
