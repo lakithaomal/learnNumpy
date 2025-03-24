@@ -30,7 +30,7 @@ np.empty((2, 3))                            # 2x3 uninitialized
 np.arange(0, 10, 2)                         # 0 to 8 step 2 - 10 is not inclusive 
 np.linspace(0, 1, 5)                        # 5 values 0 to 1 - 0 and 1 are inclusive  
 np.identity(3)                              # 3x3 identity matrix 
-np.random.random((3, 3))                    # 3x3 random matrix - Values are [0,1)
+np.random.random((3, 3)) # similar to  np.random.rand(3, 3) 3x3 random matrix - Values are [0,1)
 np.pad(np.ones((2,2)), 1, constant_values=0)# Padding with zeros
 ```
 
@@ -351,8 +351,6 @@ np.nan in set([np.nan])    # True
 np.ceil(Z)  # 1.2 will give you 3
 np.floor(Z) # 1.2 will give you 1
 ```
-
-
 
 **Note**: Use `#` comments to understand code snippets. Many operations are **broadcastable** and **vectorized** for performance.
 
