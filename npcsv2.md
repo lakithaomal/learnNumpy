@@ -192,15 +192,6 @@ np.vstack([a,b])        # Vertical stack
 np.hstack([a,b])        # Horizontal stack
 ```
 
-## Python Loops with NumPy
-
-| Task           | Best Practice               |
-|----------------|-----------------------------|
-| Items only     | for item in iterable        |
-| Indexes only   | for i in range(len(...))    |
-| Index + item   | for i, item in enumerate(iterable) |
-| 2D index+val   | for (i, j), val in np.ndenumerate(array) |
-
 ## Loop Examples
 ```python
 for item in iterable:
