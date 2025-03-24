@@ -55,7 +55,6 @@ a[:, 1]             # All rows, column 1
 a[1, :]             # Row 1, all columns
 a[1:3, 0:2]         # Subarray (rows 1-2, cols 0-1)
 a[::-1]             # Reverse array
-np.where(a != 0)    # Indices of non-zero elements
 q10.nonzero()       # Equivalent to np.where(q10 != 0)
 ```
 
@@ -91,6 +90,9 @@ a > 5                         # Element-wise comparison
 np.any(a > 5)                 # Any element > 5?
 np.all(a > 5)                 # All elements > 5?
 np.where(a > 0, 1, 0)         # Conditional selection
+a = np.array([-2, 0, 3, 5, -1])
+np.where(a != 0)              # Indices of non-zero elements # Output: (array([1, 3, 4]),)
+print(np.where(a > 0, 1, 0))  # Output: [0 0 1 1 0]
 np.intersect1d(a, b)          # Common elements (1D output)
 np.union1d(a, b)              # All unique elements (1D output)
 np.allclose(a, b)             # Approximate equality (with tolerance)
