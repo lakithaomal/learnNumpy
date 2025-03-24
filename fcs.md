@@ -119,7 +119,7 @@ np.array_equal(a, b)                        # Exactly equal - True or False outp
 a // 2                                      # Floor division
 a % 2                                       # Modulo
 np.sqrt(4)                                  # Square root
-np.emath.sqrt(-1)                           # Complex sqrt
+np.emath.sqrt(-1)                           # Complex sqrt np.sqrt(-1) returns nan and np.emath.sqrt(-1)  returns 1j 
 ```
 
 ---
